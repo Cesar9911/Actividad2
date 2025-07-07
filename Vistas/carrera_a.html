@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingenrieria en Desarrollo y Gestion de Software - Repositorio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --color-universidad-primary: #2E7D32;
+      --color-universidad-secondary: #5D4037;
+      --color-universidad-light: #F5F5F5;
+    }
+    
+    body {
+      background-color: var(--color-universidad-light);
+      font-size: 1.05rem;
+    }
+    
+    .navbar-custom {
+      background-color: var(--color-universidad-primary);
+    }
+    
+    .btn-university {
+      background-color: var(--color-universidad-primary);
+      color: white;
+    }
+    
+    .breadcrumb-custom {
+      background-color: #e9ecef;
+      padding: 0.75rem 1rem;
+      border-radius: 0.25rem;
+    }
+    
+    .list-group-item-action:hover {
+      background-color: rgba(46, 125, 50, 0.1);
+    }
+    
+    .badge-public {
+      background-color: var(--color-universidad-primary);
+    }
+    
+    .badge-private {
+      background-color: var(--color-universidad-secondary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-book me-2"></i>
+        <span>Repositorio Académico</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="subir_archivo.html"><i class="bi bi-upload me-1"></i> Subir Archivo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-person-circle me-1"></i> Mi Cuenta</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="container my-4">
+    <!-- Migas de pan -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb breadcrumb-custom">
+        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i> Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Ingenieria en Desarrollo y Gestion de Software</li>
+      </ol>
+    </nav>
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">
+        <i class="bi bi-folder2-open text-success me-2"></i>
+        Documentos - Ingenieria en Desarrollo y Gestion de Software
+      </h2>
+      <a href="subir_archivo.html" class="btn btn-university">
+        <i class="bi bi-plus-circle me-1"></i> Nuevo Archivo
+      </a>
+    </div>
+
+    <!-- Formulario de búsqueda mejorado -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" placeholder="Buscar por palabra clave" aria-label="Buscar">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <select class="form-select">
+              <option selected>Profesor...</option>
+              <option>Martínez</option>
+              <option>Gómez</option>
+              <option>Rodríguez</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <select class="form-select">
+              <option selected>Tipo...</option>
+              <option>Plan de estudios</option>
+              <option>Guía práctica</option>
+              <option>Presentación</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <select class="form-select">
+              <option selected>Cuatrimestre...</option>
+              <option>1º</option>
+              <option>2º</option>
+              <option>3º</option>
+              <option>4º</option>
+            </select>
+          </div>
+          <div class="col-md-2 d-grid">
+            <button class="btn btn-university">
+              <i class="bi bi-funnel me-1"></i> Filtrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Listado de documentos -->
+    <div class="card shadow-sm">
+      <div class="card-body p-0">
+        <div class="list-group list-group-flush">
+          <a href="detalle_archivo.html" class="list-group-item list-group-item-action py-3">
+            <div class="d-flex w-100 justify-content-between">
+              <div>
+                <h5 class="mb-1">
+                  <i class="bi bi-file-earmark-text text-success me-2"></i>
+                  Plan de Estudios 1er Cuatrimestre
+                </h5>
+                <small class="text-muted">
+                  <i class="bi bi-person-fill me-1"></i>Profesor: Martínez • 
+                  <i class="bi bi-calendar me-1"></i>Fecha: 14/06/2025
+                </small>
+                <p class="mb-1 mt-2">Plan oficial actualizado con temas por unidad. Incluye bibliografía recomendada y cronograma de actividades.</p>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-success rounded-pill">PDF</span>
+                <span class="badge bg-secondary rounded-pill">1.2 MB</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="#" class="list-group-item list-group-item-action py-3">
+            <div class="d-flex w-100 justify-content-between">
+              <div>
+                <h5 class="mb-1">
+                  <i class="bi bi-file-earmark-ppt text-danger me-2"></i>
+                  Presentación - Introducción a la Materia
+                </h5>
+                <small class="text-muted">
+                  <i class="bi bi-person-fill me-1"></i>Profesor: Gómez • 
+                  <i class="bi bi-calendar me-1"></i>Fecha: 10/06/2025
+                </small>
+                <p class="mb-1 mt-2">Diapositivas con los conceptos fundamentales para el inicio del curso.</p>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-danger rounded-pill">PPTX</span>
+                <span class="badge bg-secondary rounded-pill">4.7 MB</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="#" class="list-group-item list-group-item-action py-3">
+            <div class="d-flex w-100 justify-content-between">
+              <div>
+                <h5 class="mb-1">
+                  <i class="bi bi-file-earmark-word text-primary me-2"></i>
+                  Guía de Trabajos Prácticos
+                </h5>
+                <small class="text-muted">
+                  <i class="bi bi-person-fill me-1"></i>Profesor: Rodríguez • 
+                  <i class="bi bi-calendar me-1"></i>Fecha: 05/06/2025
+                </small>
+                <p class="mb-1 mt-2">Ejercicios y problemas para resolver en clase y como tarea. Incluye solucionario.</p>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary rounded-pill">DOCX</span>
+                <span class="badge bg-secondary rounded-pill">2.1 MB</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Paginación -->
+    <nav aria-label="Page navigation" class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Anterior</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
